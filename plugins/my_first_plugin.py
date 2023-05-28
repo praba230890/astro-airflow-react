@@ -75,7 +75,7 @@ class MyBaseView(AppBuilderBaseView):
         print(variable_value)
         if variable_value:
             Variable.set("test_plugin", variable_value, serialize_json=True)
-            return jsonify({'message': 'Variable updated successfully'})
+            return jsonify(variable_value)
         else:
             return jsonify({'message': 'Invalid request'}), 400
 
