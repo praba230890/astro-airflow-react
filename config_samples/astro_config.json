@@ -1,0 +1,95 @@
+{
+    "jobs": [
+        {
+            "source": "IERP",
+            "dags_description": [
+                {
+                    "dag_id": "test_dag",
+                    "dag_description": "test_dag",
+                    "dag_type": "SFTP",
+                    "dag_schedule_interval": "@daily",
+                    "dag_start_date": "2019-01-01",
+                    "dag_end_date": "2019-12-31",
+                    "parameters": {
+                        "sftp_config": {
+                            "host": "some_host",
+                            "port": 22,
+                            "username": "some_username",
+                            "password": "some_password",
+                            "remote_path": "/some_remote_path",
+                            "local_path": "/some_local_path",
+                            "gcs_bucket": "some_gcs_bucket",
+                            "gcs_path": "some_gcs_path" 
+                    }
+                },
+                "job_config": [
+                    {
+                        "jobs": [
+                            {
+                                "job_id": "test_job_1",
+                                "Parameters":{
+                                    "File_name_start_position": "9",
+                                    "File_name_end_position": "12",
+                                    "Date_start_position": "13",
+                                    "Date_end_position": "20"
+                                }
+                            },
+                            {
+                                "job_id": "test_job_2",
+                                "Parameters":{
+                                    "File_name_start_position": "9",
+                                    "File_name_end_position": "12",
+                                    "Date_start_position": "13",
+                                    "Date_end_position": "20"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dag_id": "test_dag_2",
+                "dag_description": "test_dag",
+                "dag_type": "SFTP",
+                "dag_schedule_interval": "@daily",
+                "dag_start_date": "2019-01-01",
+                "dag_end_date": "2019-12-31",
+                "parameters": {
+                    "sftp_config": {
+                        "host": "some_host",
+                        "port": 22,
+                        "username": "some_username",
+                        "password": "some_password",
+                        "remote_path": "/some_remote_path",
+                        "local_path": "/some_local_path",
+                        "gcs_bucket": "some_gcs_bucket",
+                        "gcs_path": "some_gcs_path" 
+                }
+            },
+            "job_config": [
+                {
+                    "jobs": [
+                        {
+                            "job_id": "test_job_1",
+                            "Parameters":{
+                                "File_name_start_position": "9",
+                                "File_name_end_position": "12",
+                                "Date_start_position": "13",
+                                "Date_end_position": "20"
+                            }
+                        },
+                        {
+                            "job_id": "test_job_2",
+                            "Parameters":{
+                                "File_name_start_position": "9",
+                                "File_name_end_position": "12",
+                                "Date_start_position": "13",
+                                "Date_end_position": "20"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}]
+}
